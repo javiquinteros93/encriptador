@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*Variables*/
+:root {
+  --color-primario: #e9ecf8;
+  --color-secundario: #0a3871;
+  --color-terciario: #ffffff;
+  --color-cuaternario: rgba(0, 0, 0, 0.25);
+  --color-quinario: #e7d852;
+  --color-sextenario: #b6ac50;
+  --color-septenario: #2efa8a;
+  --color-octanario: #57c03c;
+  --color-novenario: #285892;
+  --color-decinario: #d8dfe8;
+
+  --fuente-primaria: "Inter", sans-serif;
+}
+
+/*Estilos globales*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primario);
+}
+
+.contenedor {
+  display: flex;
+  width: 100%;
+  height: 94vh;
+  gap: 30px;
+}
+
+/*Estilización del Bloque1*/
+
+.contenedor__bloque1 {
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Header del Bloque1*/
+
+.contenedor__bloque1__header {
+  display: flex;
+  margin: 30px;
+  align-items: center;
+}
+
+.logo__alura {
+  height: 40px;
+}
+
+.titulo {
+  background-color: var(--color-novenario);
+  border: 2px solid var(--color-cuaternario);
+  padding: 15px 35px;
+  border-radius: 10px;
+  color: var(--color-primario);
+  font-size: 24px;
+}
+
+/*Main del Bloque1*/
+
+.contenedor__encriptador {
+  display: flex;
+  flex-direction: column;
+  gap: 12vh;
+}
+
+.contenedor__caja__texto {
+  padding-left: 22%;
+}
+
+.caja__texto {
+  margin-top: 4vh;
+  border: none;
+  height: 50vh;
+  width: 100%;
+  background-color: transparent;
+  font-size: 32px;
+  font-family: var(--fuente-primaria);
+  font-weight: 400;
+  resize: none;
+  padding: 10px 10px;
+  line-height: 150%;
+  color: var(--color-secundario);
+}
+
+.caja__texto::placeholder {
+  color: var(--color-secundario);
+}
+
+.caja__texto:focus,
+.caja__texto:active {
+  border: none;
+  outline: none;
+}
+
+.contenedor__encriptador__pie {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  padding-left: 22%;
+}
+
+.contenedor__caja__terminos {
+  display: flex;
+  gap: 8px;
+}
+
+.contenedor__caja__terminos p {
+  font-family: var(--fuente-primaria);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.contenedor__botones {
+  width: 100%;
+  display: flex;
+  gap: 3%;
+}
+
+.boton__encriptar {
+  padding: 15px;
+  width: 50%;
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.boton__encriptar:hover {
+  background-color: var(--color-novenario);
+}
+
+.boton__desencriptar {
+  padding: 15px;
+  width: 50%;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.boton__desencriptar:hover {
+  background-color: var(--color-decinario);
+}
+
+/*Estilización Bloque2*/
+
+.contenedor__bloque2 {
+  width: 28%;
+  height: 90vh;
+  background-color: var(--color-terciario);
+  border-radius: 32px;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px var(--color-cuaternario);
+}
+
+.contenedor__bloque2__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: auto;
+}
+
+.muñeco {
+  width: 82%;
+}
+
+/*Estilización del Bloque2 al encriptar/desencriptar texto*/
+
+.contenedor__bloque2__encriptado {
+  padding: 2%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  background-color: var(--color-terciario);
+  border-radius: 32px;
+  margin: 2%;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px var(--color-cuaternario);
+  position: relative;
+}
+
+.parrafoResultado {
+  top: 3%;
+  font-family: var(--fuente-primaria);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.boton__copiar {
+  padding: 3% 8%;
+  background-color: transparent;
+  border-radius: 24px;
+  border: 1px solid var(--color-secundario);
+  cursor: pointer;
+  width: 85%;
+  bottom: 4%;
+  position: absolute;
+}
+
+/*creditos en footer*/
+
+.footer__creditos {
+  margin-top: 15px;
+  padding-left: 20px;
+  padding: 8px;
+  width: fit-content;
+  font-family: var(--fuente-primaria);
+  font-size: 12px;
+  font-weight: 400;
+  background-color: var(--color-terciario);
+  border-top-right-radius: 15px;
+  border: 1px solid var(--color-cuaternario);
+}
+
+/*Estilización de la alerta*/
+.alerta {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 30px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px var(--color-cuaternario);
+  align-items: center;
+  gap: 5px;
+}
+
+.alertaAmarilla {
+  background-color: var(--color-quinario);
+  border-left: 4px solid var(--color-sextenario);
+}
+
+.alertaVerde {
+  background-color: var(--color-septenario);
+  border-left: 4px solid var(--color-octanario);
+}
+
+.alerta.mostrar {
+  animation: mostrar_alerta ease 0.5s forwards;
+}
+
+@keyframes mostrar_alerta {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+.alerta.esconder {
+  display: none;
+}
+
+.alerta span {
+  font-family: var(--fuente-primaria);
+  font-weight: 300;
+}
+
+/*Responsividad(pc)*/
+@media (min-width: 951px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+/*Trabajo de responsividad (Tablet)*/
+
+@media (max-width: 950px) {
+  .contenedor {
+    flex-direction: column;
+    height: auto;
+  }
+  .contenedor__bloque1 {
+    width: 100%;
+  }
+
+  .contenedor__encriptador {
+    width: 100%;
+  }
+
+  .contenedor__caja__texto {
+    padding: 0 15%;
+  }
+
+  .contenedor__encriptador__pie {
+    padding: 0 15%;
+  }
+
+  .contenedor__bloque2 {
+    width: 80%;
+    margin: 0 10%;
+    height: 40vh;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .contenedor__bloque2__encriptado {
+    height: 40vh;
+    width: 80%;
+    margin: 0% 10%;
+  }
+  .boton__copiar {
+    margin-bottom: 3%;
+  }
+}
+
+/*Trabajo de responsividad (celular)*/
+
+@media (max-width: 455px) {
+  .contenedor__botones {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+  .contenedor__botones button {
+    width: 100%;
+  }
+  .contenedor__encriptador__pie {
+    padding: 0 10%;
+    margin-bottom: 5%;
+  }
+  .contenedor__encriptador {
+    gap: 5%;
+  }
+}

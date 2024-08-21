@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="contenedor">
+        <section class="contenedor__bloque1">
+          <article class="contenedor__bloque1__header">
+            <img
+              src="./assets/Logo.png"
+              alt="logo__alura"
+              class="logo__alura"
+            />
+          </article>
+          <div class="contenedor__encriptador">
+            <div class="contenedor__caja__texto">
+              <textarea
+                name="texto"
+                id="caja__texto"
+                class="caja__texto"
+                placeholder="Ingresa el texto aquí"
+              ></textarea>
+            </div>
+            <div class="contenedor__encriptador__pie">
+              <div class="contenedor__caja__terminos">
+                <img
+                  src="./assets/bi_exclamation-circle-fill.png"
+                  alt="icono_exclamacion"
+                />
+                <p>Solo letras minúsculas y sin acentos</p>
+              </div>
+              <div class="contenedor__botones">
+                <button
+                  id="Encriptar"
+                  class="boton__encriptar"
+                  type="button"
+                  onclick="Encriptar()"
+                >
+                  Encriptar
+                </button>
+                <button
+                  id="Desencriptar"
+                  class="boton__desencriptar"
+                  type="button"
+                  onclick="Desencriptar()"
+                >
+                  Desencriptar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contenedor__bloque2" class="contenedor__bloque2__encriptado">
+          <p id="parrafo__resultado" class="parrafo__resultado"></p>
+          <div class="contenedor__bloque2__texto">
+            <img id="muñeco" class="muñeco" src="./assets/Muñeco.png"/>
+            <h2 id="h2bloque2">Ningún mensaje fue encontrado</h2>
+            <p id="parrafo">
+              Ingresa el texto que desees encriptar o desencriptar
+            </p>
+          </div>
+          <button
+            id="boton__copiar"
+            class="boton__copiar"
+            type="button"
+            onclick="copiarAlPortapapeles()"
+          >
+            Copiar
+          </button>
+        </section>
+      </div>
+      <p class="footer__creditos">
+        Proyecto desarrollado por Javier Quinteros, basado en "Challenge:
+        Encriptador de Texto" de Alura (2024)
+      </p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
